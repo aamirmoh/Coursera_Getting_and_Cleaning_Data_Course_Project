@@ -1,6 +1,17 @@
 #a code book that describes the variables, the data, and any transformations or work that you performed to 
 #clean up the data called CodeBook.md
 
+Note: 
+1. this is not a copy of featuresinfo,txt file
+2. activityID column has been removed from the data set, since it was a repeat of the same activity Data, also available in activityType column
+
+I've removed it as following. 
+
+tidyDataSet <- select(mergedData,-(activityID)) %>%
+    group_by(subjectID,activityType) %>%
+        summarise_all(mean)
+
+
 The following columns are available in the tidyDataSet.txt file. 
 
 "subjectID"                                
