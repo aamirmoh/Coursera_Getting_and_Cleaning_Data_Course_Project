@@ -98,3 +98,12 @@ colnames(allDF) <- gsub("([Bb]ody[Bb]ody|[Bb]ody)","Body",colnames(allDF))
 colnames(allDF) <- gsub("[Gg]yro","Gyro",colnames(allDF))
 colnames(allDF) <- gsub("[Mm]ag","Magnitude",colnames(allDF))
 colnames(allDF) <- gsub("[Aa]cc","Acceleration",colnames(allDF))
+
+In addition the activity data set is merged with training and test data sets. The data is merged using the activityId Column.
+  activityID       activityType
+   1            WALKING
+   2            WALKING_UPSTAIRS
+   3            WALKING_DOWNSTAIRS
+   4            SITTING
+   5            STANDING
+   6            LAYING
